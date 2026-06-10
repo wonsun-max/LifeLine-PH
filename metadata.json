@@ -1,0 +1,10 @@
+{
+  "name": "LifeLinePH",
+  "description": "Emergency First Aid & Medical Facilities App for MK and local communities in the Philippines.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

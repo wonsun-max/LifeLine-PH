@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with basic medical info and customized emergency categories.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "age": { "type": "number", "description": "User's age" },
+        "gender": { "type": "string", "description": "User's gender" },
+        "medicalConditions": { "type": "array" },
+        "medications": { "type": "array" },
+        "customCategories": { "type": "array" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["uid", "email", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profiles and medical configs."
+    }
+  }
+}
